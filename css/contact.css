@@ -20,12 +20,12 @@ nav{
 /*nav maenu on the right as a list but without bullet*/
 nav ul{
     display: inline-block;
-    list-style-type: none;   
+    list-style-type: none;
 }
 /*nav maenu on the right as a vertically list with 50px gapping with each with underline*/
 nav ul li{
     display: inline-block;
-    margin-right: 50px;   
+    margin-right: 50px;
 }
 /*nav maenu on the right as a vertically list with 50px gapping with each without underline*/
 a{
@@ -56,7 +56,7 @@ p{
 .col-2 img{
     max-width: 100%;
     padding: 50px 0;
-} 
+}
 
 .col-2 h1{
     font-size: 50px;
@@ -93,14 +93,14 @@ p{
 }
 
 .col-3 img{
-   width: 100%;
+    width: 100%;
 }
 
 .small-container{
     max-width: 1080px;
     margin: auto;
     padding-left: 25px;
-    padding-right: 25px;   
+    padding-right: 25px;
 }
 .col-4{
     flex-basis: 25%;
@@ -244,7 +244,7 @@ small{
     text-align: center;
 }
 ul{
-    list-style-type: none;   
+    list-style-type: none;
 }
 .app-logo{
     margin-top: 20px;
@@ -267,7 +267,7 @@ ul{
 
 .menu-icon{
     width: 28px;
-    margin-left: 20px;  
+    margin-left: 20px;
     display:none;
 }
 
@@ -281,7 +281,7 @@ ul{
         width: 100%;
         overflow: hidden;
         transition: max-height 0.5s;
-        
+
     }
     nav ul li{
         display: block;
@@ -292,7 +292,7 @@ ul{
     nav ul li a{
         color: #fff;
     }
-    .menu-icon{ 
+    .menu-icon{
         display:block;
         cursor: pointer;
     }
@@ -319,7 +319,7 @@ ul{
     .cart-info p{
         display: none;
     }
-    
+
 
 }
 
@@ -342,6 +342,11 @@ select:focus{
     outline: none;
 }
 
+#page-btn-center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 .page-btn{
     margin: 0 auto 80px;
 }
@@ -398,7 +403,7 @@ input:focus{
     margin-left: 10px;
 }
 .small-img-row{
-   display:flex;
+    display:flex;
     justify-content: space-evenly;
 }
 .small-img-col{
@@ -409,7 +414,7 @@ input:focus{
 
 
 
-        /*------------------------------ cart items ------------------------------*/
+/*------------------------------ cart items ------------------------------*/
 .cart-page{
     margin: 80px auto;
 }
@@ -464,7 +469,7 @@ th:last-child{
 }
 
 
-        /*------------------------------ account-page ------------------------------*/
+/*------------------------------ account-page ------------------------------*/
 .account-page{
     padding: 50px 0;
     background: radial-gradient(#fff, #ffd6d6);
@@ -486,7 +491,7 @@ th:last-child{
     padding: 0 10px;
     color: #555;
     cursor: pointer;
-    width: 100px;
+    width: 150px;
     display: inline-block;
 }
 
@@ -518,10 +523,6 @@ form .btn{
 form .btn:focus{
     outline: none;
 }
-
-#LoginForm{
-    left: -300px;
-}
 #RegForm{
     left: 0;
 }
@@ -530,12 +531,19 @@ form a{
 }
 
 #Indicator{
-    width: 100px;
+    width: 150px;
     border: none;
     background: #ff523b;
     height: 3px;
     margin-top: 8px;
-    transform: translateX(100px);
-    transition: transform 1s;
 
+}
+
+#anliegen_input{
+    height: 80px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin: 10px 0;
+    padding: 0 10px;
 }

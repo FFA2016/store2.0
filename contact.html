@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Haine Store</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/contact.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
@@ -48,22 +48,15 @@
                     <div class="col-2">
                         <div class="form-container">
                             <div class="form-btn">
-                                <span onclick="login()">Login</span>
-                                <span onclick="register()">Register</span>
+                                <span onclick="">Contact Us</span>
                                 <hr id="Indicator">
                             </div>
-                            <form id="LoginForm">
-                                <input type="text" placeholder="username">
-                                <input type="password" placeholder="password">
-                                <button type="submit" class="btn">Login</button>
-                                <a href="">Forgot password</a>
-                            </form>
                             
                             <form id="RegForm">
-                                <input type="text" placeholder="username">
-                                <input type="email" placeholder="email">
-                                <input type="password" placeholder="password">
-                                <button type="submit" class="btn">Register</button>
+                                <input type="text" placeholder="Name">
+                                <input type="email" placeholder="Email">
+                                <textarea id="anliegen_input" placeholder="Ihr Anliegen" cols="33" rows="5" style="resize: none; border: 1px solid #ccc"></textarea>
+                                <button type="submit" class="btn">Absenden</button>
                             </form>
                         </div>
                     </div>
