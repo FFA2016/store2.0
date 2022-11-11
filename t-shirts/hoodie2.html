@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>All Products - Redstore</title>
+        <title>Haine Store</title>
         <link rel="stylesheet" href="../style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -65,11 +65,11 @@
                         <h4>$50.0</h4>
                         <select>
                             <option>Select Size</option>
-                            <option>6<!--Small (s)--></option>
-                            <option>7<!--Medium (M)--></option>
-                            <option>8<!--Large (L)--></option>
-                            <option>9<!--XL--></option>
-                            <option>10<!--XXL--></option>
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
                         </select>
                         <input type="number" value='1'>
                         <a href="../cart.html" class="btn" id="addtocart_btn" onclick="connecttodatabase();">Add to Cart</a>
@@ -227,30 +227,7 @@
         </script>
 -->
 
-        <script type="CommonJS">
-            var mysql = require('mysql');
-            //import mysql from 'mysql';
 
-            function connecttodatabase(string) {
-                var con = mysql.createConnection({
-
-                    host: "185.236.11.136",
-                    user: "management",
-                    password: "9Gy6@a79x"
-
-                });
-                con.connect(function (err) {
-                    if (err) throw err;
-                    console.log("Connected!");
-                });
-
-                con.query('SELECT * FROM shop.produkte AS solution', function (error, results, fields) {
-                    if (error) throw error;
-                    console.log('The solution is: ', results[0]);
-                });
-
-            };
-        </script>
         <!----------------js for cart--------------->
 
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

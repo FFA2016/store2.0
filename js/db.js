@@ -16,7 +16,7 @@ function connecttodatabase(string) {
 
     con.query('SELECT * FROM shop.produkte AS solution', function (error, results, fields) {
         if (error) throw error;
-        console.log('The solution is: ', results[0]);
+        console.log('The solution is: ', results);
     });
 
 };
