@@ -328,6 +328,12 @@ ul{
     justify-content: space-between;
     margin:100px auto 50px;
 }
+#show_all_btn{
+    border:1px solid #ff523b;
+    padding: 5px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
 select{
     border:1px solid #ff523b;
     padding: 5px;
