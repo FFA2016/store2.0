@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     
     <head>
@@ -10,9 +9,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="../js/cart.js"></script>
 
     </head>
     <body>
+
         <!--<div class ="header">-->
         <div class="container">
             <div class="navbar">
@@ -23,8 +24,8 @@
                     <ul id="MenuItems">
                         <li><a href="../index.html">Home</a></li>
                          <li><a href="../products.html">Products</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                         <li><a href="">About</a></li>
+                         <li><a href="">Contact</a></li>
                          <li><a href="../account.html">Account</a></li>
 
                     </ul>
@@ -44,12 +45,12 @@
             <!--<h2 class="title" >Featured Products</h2>-->
             <div class="row">
                     <div class="col-2">
-                        <img src="../images/Basic-Hoodie.png" width="100%" id="productImg">
+                        <img src="../images/hoodie-beige-blau-front.png" width="100%" id="productImg">
                         
                         
                         <div class="small-img-row">
                             <div class="small-img-col">
-                                <img src="../images/Basic-Hoodie.png" width="100%" class="small-img">
+                                <img src="../images/hoodie-beige-blau-front.png" width="100%" class="small-img">
                             </div>
                              <div class="small-img-col">
                                 <img src="../images/hoodie-beige-blau-back.png" width="100%" class="small-img">
@@ -60,7 +61,16 @@
                     <div class="col-2">
                         <p>Home / Hoodies</p>
                         <h1>Hoodie</h1>
-                        <h4>$50.00</h4>
+                        <h4>
+                            <?php
+                            $pdo = new PDO('mysql:host=185.236.11.136;dbname=shop', 'webshopabfragen', '7L0eze64$');
+
+                            $sql = "SELECT preis FROM produkte WHERE produkt_nr='2'";
+                            foreach ($pdo->query($sql) as $row) {
+                                echo $row['preis']  . '€';
+                            }
+                            ?>
+                        </h4>
                         <select>
                             <option>Select Size</option>
                             <option>6<!--Small (s)--></option>
@@ -69,11 +79,31 @@
                             <option>9<!--XL--></option>
                             <option>10<!--XXL--></option>
                         </select>
-                        <input type="number" value='1'>
-                        <a href="../cart.html" class="btn">Add to Cart</a>
+                        <input id="quantity_selector" type="number" value='1'>
+                        <a class="btn" onclick="
+                                let quantity = document.getElementById('quantity_selector').value;
+                                console.log('
+                        <?php
+                        $pdo = new PDO('mysql:host=185.236.11.136;dbname=shop', 'webshopabfragen', '7L0eze64$');
+
+                        $sql = "SELECT produkt_nr, preis FROM `produkte` WHERE produkt_nr='2'";
+                        foreach ($pdo->query($sql) as $row) {
+                            echo $row[0];
+                        }
+                        ?>
+                                ') ">Add to Cart</a>
                         <h3>Product Details <i class="fa fa-indent" ></i></h3>
                         <br>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p>
+                            <?php
+                            $pdo = new PDO('mysql:host=185.236.11.136;dbname=shop', 'webshopabfragen', '7L0eze64$');
+
+                            $sql = "SELECT beschreibung FROM produkte WHERE produkt_nr='2'";
+                            foreach ($pdo->query($sql) as $row) {
+                                echo $row['beschreibung'];
+                            }
+                            ?>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -91,8 +121,8 @@
         <div class="small-container">
              <div class="row">
                      <div class="col-4">
-                        <a href="basic-hoodie.html"><img src="../images/Basic-Hoodie.png"></a>
-                        <a href="basic-hoodie.html"><h4>Downshifter Sports Shoes</h4></a>
+                        <a href="beige-blue-hoodie.php"><img src="../images/hoodie-beige-blau-front.png"></a>
+                        <a href="beige-blue-hoodie.php"><h4>Downshifter Sports Shoes</h4></a>
                         <div class="rating">
                             
                             <i class="fa fa-star" ></i>
@@ -104,7 +134,7 @@
                         <p>$50.00</p>
                     </div>
                     <div class="col-4">
-                        <a href="basic-hoodie.html"><img src="../images/product-2.jpg"></a>
+                        <a href="beige-blue-hoodie.php"><img src="../images/product-2.jpg"></a>
                         <h4>Lace-Up Running Shoes</h4>
                         <div class="rating">
                             <i class="fa fa-star" ></i>
@@ -116,7 +146,7 @@
                         <p>$35.00</p>
                     </div>
                     <div class="col-4">
-                        <a href="basic-hoodie.html"><img src="../images/product-3.jpg"></a>
+                        <a href="beige-blue-hoodie.php"><img src="../images/product-3.jpg"></a>
                         <h4>Lace Fastening Shoes</h4>
                         <div class="rating">
                             <i class="fa fa-star" ></i>
@@ -128,7 +158,7 @@
                         <p>$15.00</p>
                     </div>
                     <div class="col-4">
-                        <a href="basic-hoodie.html"><img src="../images/product-10.jpg"></a>
+                        <a href="beige-blue-hoodie.php"><img src="../images/product-10.jpg"></a>
                         <h4>Flat Lace-Fastening Shoes</h4>
                         <div class="rating">
                             <i class="fa fa-star" ></i>
@@ -224,10 +254,6 @@
             
         </script>
 
-        <!----------------js for cart--------------->
 
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
-        <script  src="../js/cart.js"></script>
     </body>
 </html>
