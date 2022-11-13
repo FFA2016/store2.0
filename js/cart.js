@@ -21,13 +21,29 @@ function showlocalstorage(){
     }
 }
 
+function apply_coupon(discount_amount, gueltig){
+    if(localStorage.getItem('product_to_add')){
+        if(gueltig == 1) {
+            let total_price = 0;
+            JSON.parse(localStorage.getItem('product_to_add')).forEach((element) => {
+                total_price = total_price + (element.price * element.quantity);
+            })
+            console.log((total_price * (1 - (discount_amount / 100)) + " With Discount"));
+            let table = document.getElementById("cart_products_total");
+            let row = table.insertRow(-1);
+            row.insertCell(0).appendChild(document.createTextNode(total_price + ' €'));
+        } else{
+            alert("Bitte gib eine  gültigen Rabattcode ein!");
+        }
+    }
+}
+
 function totalprice(){
     if(localStorage.getItem('product_to_add')){
         let total_price = 0;
         JSON.parse(localStorage.getItem('product_to_add')).forEach((element) => {
             total_price = total_price + (element.price * element.quantity);
         })
-        console.log(total_price);
         let table = document.getElementById("cart_products_total");
         let row = table.insertRow(-1);
         row.insertCell(0).appendChild(document.createTextNode(total_price + ' €'));

@@ -28,7 +28,7 @@
 
                     </ul>
                 </nav>
-                <a href="../cart.html"><img src="../images/cart.png" width="30px" height="30px"></a>
+                <a href="../cart.php"><img src="../images/cart.png" width="30px" height="30px"></a>
                 <img src="../images/menu.png" class="menu-icon" onClick="menutoggle()" >
             </div>
            
@@ -78,7 +78,7 @@
                             <option>10<!--XXL--></option>
                         </select>
                         <input type="number" value='1'>
-                        <a href="../cart.html" class="btn" onclick="
+                        <a href="../cart.php" class="btn" onclick="
                                 addtocart({price:
 
                         <?php

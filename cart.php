@@ -51,13 +51,49 @@
             </tr>
         </table>
 
-            <div id="Indicator_cart"></div>
 
         <table id="cart_products_total">
             <tr>
                 <th>Preis</th>
             </tr>
         </table>
+
+            <div id="coupon_div">
+                <form action="" method="post">
+                    <p>Gib einen Gutscheincode ein:  </p>
+                    <input type="text" id="coupon_input" name="couponcode">
+
+                    <input type="submit" id="coupon_btn" name="submit" value="Einlösen" onclick="apply_coupon(
+
+                    <?php
+                    if(isset($_POST['submit'])){
+                        $couponcode =  $_POST['couponcode'];
+                        $pdo = new PDO('mysql:host=185.236.11.136;dbname=shop', 'webshopabfragen', '7L0eze64$');
+
+                        $sql = "SELECT rabatt_prozent FROM `rabattcodes` WHERE code='$couponcode'";
+                        $row = null;
+                        foreach ($pdo->query($sql) as $row) {
+                            echo $row['rabatt_prozent'];
+                        }
+                    }
+                    ?> ,
+
+                    <?php
+                    if(isset($_POST['submit'])){
+                        $couponcode =  $_POST['couponcode'];
+                        $pdo = new PDO('mysql:host=185.236.11.136;dbname=shop', 'webshopabfragen', '7L0eze64$');
+
+                        $sql = "SELECT gueltig FROM `rabattcodes` WHERE code='$couponcode'";
+                        $row = null;
+                        foreach ($pdo->query($sql) as $row) {
+                            echo $row['gueltig'];
+                        }
+                    }
+                    ?>
+
+                            )">
+                </form>
+            </div>
             <script>totalprice()</script>
             <script>showlocalstorage()</script>
 

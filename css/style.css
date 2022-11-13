@@ -474,13 +474,25 @@ th:last-child{
     text-align: right;
 }
 
-#Indicator_cart{
+#coupon_input{
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ff523b;
+    width: 150px;
+}
+
+#coupon_div{
     display: flex;
-    width: 100%;
+    justify-content: flex-end;
+}
+
+#coupon_btn{
+    width: 80px;
+    background-color: #ff523b;
     border: none;
-    background: #ff523b;
-    height: 3px;
-    margin-top: 8px;
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 5px;
 }
 
 
